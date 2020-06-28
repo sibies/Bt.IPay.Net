@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace Bt.IPay.Net.Reqursts
+namespace Bt.IPay.Net.Requests
 {
     /// <summary>
-    /// Este necesar să specificați orderId sau orderNumber în request. Dacă solicitarea conține ambii parametrii, orderId este prioritar.
+    /// Este necesar să specificați orderId sau orderNumber în request. Dacă solicitarea conține ambii parametrii,
+    /// orderId este prioritar.
     /// </summary>
     public class GetOrderStatusExtendedRequest: RequestBase
     {
@@ -22,6 +23,5 @@ namespace Bt.IPay.Net.Reqursts
         [StringLength(36)]
         [JsonProperty("orderId")]
         public string OrderId { get; set; }
-
     }
 }

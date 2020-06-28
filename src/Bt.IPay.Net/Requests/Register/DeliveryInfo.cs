@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Bt.IPay.Net.Reqursts.Register
+namespace Bt.IPay.Net.Requests.Register
 {
     public class DeliveryInfo
     {
