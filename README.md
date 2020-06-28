@@ -1,4 +1,4 @@
-# Bt.IPay.Net
-Banca Transilvania Payments .Net Provider
+# BT.IPay.Net
+Banca Transilvania ePos .Net Provider
 
-Mai multe detalii: https://btepos.ro/documentatie
+Documentatie BT ePos: https://btepos.ro/documentatie
