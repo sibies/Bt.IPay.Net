@@ -9,16 +9,19 @@ namespace Bt.IPay.Net.Responses.GetOrderStatusExtended
         /// </summary>
         [JsonProperty("expiration")]
         public string Expiration { get; set; }
+        
         /// <summary>
         /// Nume deținător de card. Precizat numai pentru comenzile plătite.
         /// </summary>
         [JsonProperty("cardholderName")]
         public string CardholderName { get; set; }
+        
         /// <summary>
         /// Cod de autorizare IPS.
         /// </summary>
         [JsonProperty("approvalCode")]
         public string ApprovalCode { get; set; }
+        
         /// <summary>
         /// Numărul mascat al cardului care a fost utilizat la plată. Precizat numai pentru comenzile plătite.
         /// </summary>

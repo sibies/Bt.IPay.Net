@@ -11,6 +11,7 @@ namespace Bt.IPay.Net.Responses.GetOrderStatusExtended
         [StringLength(7)]
         [JsonProperty("name")]
         public string Name { get; set; }
+        
         /// <summary>
         /// Valoarea atributului - identificator de comandă în sistemul de plăți (unic în sistem).
         /// </summary>

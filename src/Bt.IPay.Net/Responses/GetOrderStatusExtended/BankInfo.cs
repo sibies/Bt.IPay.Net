@@ -11,12 +11,14 @@ namespace Bt.IPay.Net.Responses.GetOrderStatusExtended
         [StringLength(2)]
         [JsonProperty("bankName")]
         public string BankName { get; set; }
+        
         /// <summary>
         /// Codul țării băncii emitente
         /// </summary>
         [StringLength(2)]
         [JsonProperty("bankCountryCode")]
         public string BankCountryCode { get; set; }
+        
         /// <summary>
         /// Țara băncii emitente
         /// </summary>
