@@ -1,4 +1,4 @@
-﻿namespace Bt.IPay.Net.Reqursts
+﻿namespace Bt.IPay.Net.Requests
 {
     public enum IPayCurrency
     {
@@ -167,7 +167,6 @@
         YER = 886,
         ZMW = 967,
         ZWL = 932,
-        EUR = 978
-
+        EUR = 978,
     }
 }

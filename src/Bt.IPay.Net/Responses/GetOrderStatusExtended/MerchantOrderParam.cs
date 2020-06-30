@@ -11,6 +11,7 @@ namespace Bt.IPay.Net.Responses.GetOrderStatusExtended
         [StringLength(20)]
         [JsonProperty("name")]
         public string Name { get; set; }
+        
         /// <summary>
         /// Valoarea parametrului suplimentar.
         /// </summary>

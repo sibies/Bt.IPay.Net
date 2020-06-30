@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 using System.Threading.Tasks;
-using Bt.IPay.Net.Reqursts;
+using Bt.IPay.Net.Requests;
 using Bt.IPay.Net.Responses;
 using FluentAssertions;
 using Xunit;

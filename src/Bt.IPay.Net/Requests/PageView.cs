@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Bt.IPay.Net.Reqursts
+namespace Bt.IPay.Net.Requests
 {
     public enum PageView
     {

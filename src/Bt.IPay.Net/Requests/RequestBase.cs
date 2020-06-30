@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace Bt.IPay.Net.Reqursts
+namespace Bt.IPay.Net.Requests
 {
     public class RequestBase
     {

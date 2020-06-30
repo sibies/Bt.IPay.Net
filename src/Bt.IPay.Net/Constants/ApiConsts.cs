@@ -12,7 +12,6 @@
             public const string BaseRegisterPreAuthApiPath = BaseApiPath + "/registerPreAuth.do";
             public const string BaseGetOrderStatusApiPath = BaseApiPath + "/getOrderStatus.do";
             public const string BaseGetOrderStatusExtendedApiPath = BaseApiPath + "/getOrderStatusExtended.do";
-
         }
 
         public static class Test
@@ -23,7 +22,6 @@
             public const string BaseRegisterPreAuthApiPath = BaseApiPath + "/registerPreAuth.do";
             public const string BaseGetOrderStatusApiPath = BaseApiPath + "/getOrderStatus.do";
             public const string BaseGetOrderStatusExtendedApiPath = BaseApiPath + "/getOrderStatusExtended.do";
-
         }
     }
 }
