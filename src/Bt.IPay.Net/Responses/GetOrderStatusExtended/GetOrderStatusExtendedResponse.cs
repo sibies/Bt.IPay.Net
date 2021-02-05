@@ -5,6 +5,11 @@ namespace Bt.IPay.Net.Responses.GetOrderStatusExtended
 {
     public class GetOrderStatusExtendedResponse : ResponseBase
     {
+        public GetOrderStatusExtendedResponse()
+        {
+            ActionCode = ActionCode.DeclineGeneralError;
+        }
+        
         /// <summary>
         /// Numărul (identificatorul) comenzii în sistemul comerciantului.
         /// </summary>
