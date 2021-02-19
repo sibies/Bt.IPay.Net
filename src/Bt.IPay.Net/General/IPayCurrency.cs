@@ -1,4 +1,4 @@
-﻿namespace Bt.IPay.Net.Requests
+﻿namespace Bt.IPay.Net.General
 {
     public enum IPayCurrency
     {

@@ -1,7 +1,9 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
 
 namespace Bt.IPay.Net.Requests
 {
+    [Obsolete("Nu se mai foloseste")]
     public enum PageView
     {
         /// <summary>

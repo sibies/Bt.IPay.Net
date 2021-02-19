@@ -4,13 +4,15 @@ using Newtonsoft.Json;
 namespace Bt.IPay.Net.Requests
 {
     /// <summary>
-    /// Este necesar să specificați orderId sau orderNumber în request. Dacă solicitarea conține ambii parametrii,
-    /// orderId este prioritar.
+    /// Este necesar să specificați orderId sau orderNumber în request. Dacă solicitarea conține ambii parametrii, orderId este prioritar.
     /// </summary>
-    public class GetOrderStatusExtendedRequest: RequestBase
+    public class GetOrderStatusExtendedRequest : RequestBase
     {
         /// <summary>
-        /// Numărul (identificatorul) comenzii în sistemul comerciantului.
+        /// Numărul unic (identificatorul) comenzii în sistemul comerciantului.
+        /// În cazul în care este necesară reluarea tranzacției indiferent de motiv, trebuie reluat fluxul cu un nou orderNumber.
+        /// Recomandăm ca orderNumber să fie asociat cu numărul facturii sau orice alt ID unic relevant + numărul iterației pentru aceeași operațiune.
+        /// De exemplu: nrFactură-0, nrFactură-1, nrFactură-2 etc
         /// </summary>
         [StringLength(32)]
         [JsonProperty("orderNumber")]

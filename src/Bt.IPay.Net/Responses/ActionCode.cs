@@ -169,7 +169,7 @@
         /// <summary>
         /// Incorrect PIN (not for internet transactions)
         /// </summary>
-        IncorrectPIN = 117,
+        IncorrectPin = 117,
         /// <summary>
         /// Decline. SECURITY_VIOLATION from processing system
         /// </summary>
@@ -205,42 +205,36 @@
         /// Decline. Card limitations exceeded
         /// </summary>
         CardLimitationsExceeded = 209,
-        
+
         /// <summary>
         /// Card inactiv. Vă rugăm activați cardul.
         /// </summary>
-        [Obsolete("Vazut daca mai trebuie")]
         CardInactiv = 320,
 
         /// <summary>
         /// Reversal is processed
         /// </summary>
         TheReversalIsProcessed = 400,
-       
+
         /// <summary>
         /// Emitent indisponibil
         /// </summary>
-        [Obsolete("Vazut daca mai trebuie")]
         EmitentIndosponibil = 801,
         /// <summary>
         /// Card blocat. Vă rugăm contactați banca emitentă.
         /// </summary>
-        [Obsolete("Vazut daca mai trebuie")]
         CardBlocat = 803,
         /// <summary>
         /// Tranzacție respinsă.
         /// </summary>
-        [Obsolete("Vazut daca mai trebuie")]
         TranzactieRespinsa = 805,
         /// <summary>
         /// Dată expirare card greșită.
         /// </summary>
-        [Obsolete("Vazut daca mai trebuie")]
         DataExpirareCardGresita = 861,
         /// <summary>
         /// CVV gresit
         /// </summary>
-        [Obsolete("Vazut daca mai trebuie")]
         CvvGresit = 871,
 
         /// <summary>
@@ -255,11 +249,13 @@
         /// The message format is incorrect in terms of the issuing bank.
         /// </summary>
         DeclineFormatError = 904,
-
+        /// <summary>
+        ///  Card invalid. Acesta nu există în baza de date.
+        /// </summary>
+        CardInvalid = 905,
         /// <summary>
         /// Card expirat.
         /// </summary>
-        [Obsolete("Vazut daca mai trebuie")]
         CardGresit = 906,
 
         /// <summary>
@@ -294,13 +290,16 @@
         /// <summary>
         /// Fonduri insuficiente.
         /// </summary>
-        [Obsolete("Vazut daca mai trebuie")]
         FonduriInsuficiente = 915,
         /// <summary>
         /// Limită tranzacționare depășită.
         /// </summary>
-        [Obsolete("Vazut daca mai trebuie")]
         LimitaTranzactieDepasita = 917,
+
+        /// <summary>
+        /// Tranzacția în rate nu este permisă cu acest card. Te rugăm să folosești un card de credit emise de Banca Transilvania.
+        /// </summary>
+        TranzacțiaInRateNuEstePermisăCuAcestCard = 998,
         /// <summary>
         /// The beginning of the transaction authorization is missed. Declined by fraud.
         /// </summary>
@@ -385,5 +384,25 @@
         /// General error
         /// </summary>
         DeclineGeneralError = 341014,
+        /// <summary>
+        /// 3DS2 authentication is declined by Authentication Response (ARes)
+        /// </summary>
+        AuthenticationResponseARes = 341016,
+        /// <summary>
+        /// 3DS2 authentication status in ARes is unknown
+        /// </summary>
+        AResIsUnknown = 341017,
+        /// <summary>
+        /// 3DS2 CReq cancelled
+        /// </summary>
+        CReqCancelled = 341018,
+        /// <summary>
+        /// 3DS2 CReq failed
+        /// </summary>
+        CReqFailed = 341019,
+        /// <summary>
+        /// 3DS2 unknown status in RReq
+        /// </summary>
+        RReqUnknownStatus = 341020
     }
 }
