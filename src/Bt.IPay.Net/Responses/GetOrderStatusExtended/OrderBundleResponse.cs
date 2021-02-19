@@ -9,7 +9,7 @@ namespace Bt.IPay.Net.Responses.GetOrderStatusExtended
         /// Data comenzii. Format dată unix
         /// </summary>
         [JsonProperty("orderCreationDate")]
-        public int OrderCreationDate { get; set; }
+        public long OrderCreationDate { get; set; }
 
         /// <summary>
         /// Detalii despre client. Consultați descrierea conținutului acestui bloc mai jos.
