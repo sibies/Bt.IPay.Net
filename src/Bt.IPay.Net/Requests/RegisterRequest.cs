@@ -150,7 +150,7 @@ namespace Bt.IPay.Net.Requests
         [Required]
         [StringLength(1024)]
         [JsonProperty("jsonParams")]
-        public string JsonParamsString => JsonParams == null ? string.Empty : Internal.JsonConverter.SerializeObject(JsonParams.Force3dSe());
+        public string JsonParamsString => Internal.JsonConverter.SerializeObject(JsonParams.Force3dSe());
 
         /// <summary>
         /// Câmpuri de informații suplimentare pentru stocare.Tipul este { "param": "valoare", "param2": "valoare2"}.
