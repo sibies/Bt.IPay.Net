@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
 namespace Bt.IPay.Net.Requests.Register
@@ -11,12 +12,13 @@ namespace Bt.IPay.Net.Requests.Register
         /// Data comenzii. Format dată yyyy-MM-dd
         /// </summary>
         [JsonIgnore]
-        public DateTime OrderCreationDate { get; set; }
+        public DateTime OrderCreationDate { get; set; } = DateTime.Now;
 
         /// <summary>
         /// Detalii despre client. Consultați descrierea conținutului acestui bloc mai jos.
         /// </summary>
+        [Required]
         [JsonProperty("customerDetails")]
-        public CustomerDetails CustomerDetails { get; set; }
+        public CustomerDetails CustomerDetails { get; set; } = new CustomerDetails();
     }
 }

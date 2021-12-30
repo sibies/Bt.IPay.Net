@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using Bt.IPay.Net.Extensions;
 using Bt.IPay.Net.General;
 using Bt.IPay.Net.Internal;
 using Bt.IPay.Net.Requests.Register;
@@ -16,9 +17,10 @@ namespace Bt.IPay.Net.Requests
     {
         public RegisterRequest()
         {
-            OrderNumber = Helpers.GetTimeStamp();
-            CultureInfo = CultureInfo.GetCultureInfo("RO-ro");
-            //this.Force3dSe();
+            //OrderNumber = Helpers.GetTimeStamp();
+            //CultureInfo = CultureInfo.GetCultureInfo("RO-ro");
+            //Currency = IPayCurrency.RON;
+            this.Force3dSe();
         }
 
         /// <summary>
@@ -31,7 +33,7 @@ namespace Bt.IPay.Net.Requests
         [Required]
         [StringLength(32)]
         [JsonProperty("orderNumber")]
-        public string OrderNumber { get; private set; }
+        public string OrderNumber { get; private set; } = Helpers.GetTimeStamp();
         /// <summary>
         /// Suma comenzii în subunități de monedă (de exemplu, bani, cenți).
         /// </summary>
@@ -45,7 +47,7 @@ namespace Bt.IPay.Net.Requests
         [Required]
         [MaxLength(999)]
         [JsonProperty("currency")]
-        public IPayCurrency Currency { get; set; }
+        public IPayCurrency Currency { get; set; } = IPayCurrency.RON;
         /// <summary>
         /// Adresa web către care clientul trebuie redirecționat după finalizarea plății(atât în cazul în care plata este cu success, cât și în cazul în care plata este eșuată).
         /// Acest URL trebuie să fie pagina dvs.de finish
@@ -67,13 +69,15 @@ namespace Bt.IPay.Net.Requests
         [JsonProperty("language")]
         public string Language => CultureInfo.TwoLetterISOLanguageName;
 
+        /// <summary>
+        /// Adresa de e-mail a clientului
+        /// </summary>
+        [StringLength(254)]
+        [JsonProperty("email")]
+        public string Email { get; set; }
 
         [JsonIgnore]
-        public CultureInfo CultureInfo { get; set; }
-
-        //[StringLength(999)]
-        //[JsonProperty("installment")]
-        //public string InstallmentString => JsonParams == null ? string.Empty : Internal.JsonConverter.SerializeObject(JsonParams);
+        public CultureInfo CultureInfo { get; set; } = CultureInfo.GetCultureInfo("RO-ro");
 
         /// <summary>
         /// Număr de rate specificat în luni(trebuie să coincidă cu una din perioadele specificate de comerciant ca fiind disponibilă)
@@ -143,9 +147,10 @@ namespace Bt.IPay.Net.Requests
         [Obsolete("Nu se mai foloseste")]
         public PageView PageView { get; set; }
 
+        [Required]
         [StringLength(1024)]
         [JsonProperty("jsonParams")]
-        public string JsonParamsString => JsonParams == null ? string.Empty : Internal.JsonConverter.SerializeObject(JsonParams);
+        public string JsonParamsString => JsonParams == null ? string.Empty : Internal.JsonConverter.SerializeObject(JsonParams.Force3dSe());
 
         /// <summary>
         /// Câmpuri de informații suplimentare pentru stocare.Tipul este { "param": "valoare", "param2": "valoare2"}.
@@ -153,8 +158,9 @@ namespace Bt.IPay.Net.Requests
         /// Dacă plata în puncte de loialitate este activată pentru comerciant(poate fi activată în perioada de integrare cu acordul băncii), acest bloc ar trebui să conțină parametrul “loyaltyAmount”, a cărei valoare este suma în bani.
         /// </summary>
         [JsonIgnore]
-        public Dictionary<string, string> JsonParams { get; set; }
+        public Dictionary<string, string> JsonParams { get; set; } = new Dictionary<string, string>();
 
+        [Required]
         [JsonProperty("orderBundle")]
         public string OrderBundleString => OrderBundle == null ? string.Empty : Internal.JsonConverter.SerializeObject(OrderBundle);
 
@@ -162,6 +168,6 @@ namespace Bt.IPay.Net.Requests
         /// Informații despre detaliile comenzii și livrare, precum și informații despre client
         /// </summary>
         [JsonIgnore]
-        public OrderBundle OrderBundle { get; set; }
+        public OrderBundle OrderBundle { get; set; } = new OrderBundle();
     }
 }

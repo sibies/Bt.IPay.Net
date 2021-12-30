@@ -24,5 +24,22 @@ namespace Bt.IPay.Net.Extensions
                 request.JsonParams = new Dictionary<string, string> { { Force3Ds2Key, Force3Ds2DefaultValue } };
             }
         }
+
+        public static Dictionary<string, string> Force3dSe(this Dictionary<string, string> jsonParams)
+        {
+            if (jsonParams != null && jsonParams.Any())
+            {
+                if (!jsonParams.ContainsKey(Force3Ds2Key))
+                {
+                    jsonParams.Add(Force3Ds2Key, Force3Ds2DefaultValue);
+                }
+            }
+            else
+            {
+                jsonParams = new Dictionary<string, string> { { Force3Ds2Key, Force3Ds2DefaultValue } };
+            }
+
+            return jsonParams;
+        }
     }
 }

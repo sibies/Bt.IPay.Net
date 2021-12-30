@@ -25,7 +25,7 @@ namespace Bt.IPay.Net.Requests.Register
         public string Email { get; set; }
 
         private const string DefaultPhone = "40999999999";
-        private string _phone;
+        private string _phone = DefaultPhone;
         /// <summary>
         /// Numărul de telefon al clientului.
         /// Trebuie să contină doar cifre, în format internațional(de ex.40740123456).
@@ -58,12 +58,12 @@ namespace Bt.IPay.Net.Requests.Register
         /// </summary>
         [Required]
         [JsonProperty("deliveryInfo")]
-        public DeliveryInfo DeliveryInfo { get; set; }
+        public DeliveryInfo DeliveryInfo { get; set; } = new DeliveryInfo();
         /// <summary>
         /// Detalii despre livrarea comenzii care conțin parametrii descriși mai jos.Formatul de date este același ca pentru parametrul deliveryInfo[]
         /// </summary>
         [Required]
         [JsonProperty("billingInfo")]
-        public BillingInfo BillingInfo { get; set; }
+        public BillingInfo BillingInfo { get; set; } = new BillingInfo();
     }
 }

@@ -52,6 +52,7 @@ namespace Bt.IPay.Net.Responses.GetOrderStatusExtended
         /// <summary>
         /// Descrierea codului furnizat de parametrul actionCode
         /// </summary>
+        [StringLength(512)]
         [JsonProperty("actionCodeDescription")]
         public string ActionCodeDescription { get; set; }
         /// <summary>

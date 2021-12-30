@@ -36,5 +36,10 @@
         /// Authorization declined
         /// </summary>
         AuthorizationDeclined = 6,
+
+        /// <summary>
+        /// Transaction was partially refunded
+        /// </summary>
+        TransactionWasPartiallyRefounded = 7,
     }
 }

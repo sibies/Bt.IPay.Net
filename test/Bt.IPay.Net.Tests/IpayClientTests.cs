@@ -18,23 +18,24 @@ namespace Bt.IPay.Net.Tests
             var data = new RegisterRequest
             {
                 Currency = IPayCurrency.RON,
-                Description = "Test",
+                Description = "testBT",
                 Amount = 1519525,// => 15.195,25
                 ReturnUrl = "https://ecclients.btrl.ro:5443/payment/merchants/Test_BT/finish.html",
+               // JsonParams = new Dictionary<string, string> { { "tipPlata", "IT" },{ "18", "8590" } },
                 //JsonParams = "{\"tipPlata\":\"IT\" , \"18\":\"8590\" , \"98\":\"2356\" , \"154\":\"167\"}",
                 OrderBundle =
                     new OrderBundle
                     {
                         CustomerDetails = new CustomerDetails
                         {
-                            Phone = "+045 435 3453 45345345",
-                            //Email = "email",
+                            Phone = "40740123456",
+                            Email = "mail@test.com",
                             Contact = "Vasile Ion ăîîasdsadşţâîăpş",
                             BillingInfo = new BillingInfo
                             {
                                 City = "Cluj",
-                                PostAddress = "Dumbrăvii 101 " + Environment.NewLine + " cevăăîş aa",
-
+                                PostAddress = "Str.Sperantei" + Environment.NewLine + " cevăăîş aa",
+                                PostalCode = "2345"
                             },
                             DeliveryInfo = new DeliveryInfo
                             {
@@ -58,7 +59,7 @@ namespace Bt.IPay.Net.Tests
             var client = new IpayClient("test_api", "test_api1");
             var data = new GetOrderStatusExtendedRequest
             {
-                OrderId = "735fdedb-ed78-41f5-8d63-56303722d126"
+                OrderId = "44c36581-7b32-4d2f-9d8e-d932a7a8beae"
             };
 
             var response = await client.GetOrderStatusExtended(data);
