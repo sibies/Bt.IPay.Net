@@ -2,7 +2,8 @@
 {
     public static class ApiConsts
     {
-        public const string Version = "2.0.0";
+        public const string Version = "2.1.0.0";
+        public const string DefaultPhone = "40799999999";
 
         public static class Production
         {

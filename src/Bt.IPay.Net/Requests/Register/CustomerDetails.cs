@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Bt.IPay.Net.Constants;
 using Bt.IPay.Net.Internal;
 using Newtonsoft.Json;
 
@@ -9,12 +10,7 @@ namespace Bt.IPay.Net.Requests.Register
     /// </summary>
     public class CustomerDetails
     {
-        public CustomerDetails()
-        {
-            DeliveryInfo = new DeliveryInfo();
-            BillingInfo = new BillingInfo();
-            _phone = DefaultPhone;
-        }
+       
         /// <summary>
         /// Adresa de e-mail a clientului
         /// </summary>
@@ -24,12 +20,11 @@ namespace Bt.IPay.Net.Requests.Register
         [JsonProperty("email")]
         public string Email { get; set; }
 
-        private const string DefaultPhone = "40999999999";
-        private string _phone = DefaultPhone;
+        private string _phone = ApiConsts.DefaultPhone;
         /// <summary>
         /// Numărul de telefon al clientului.
         /// Trebuie să contină doar cifre, în format internațional(de ex.40740123456).
-        /// Default: <see cref="DefaultPhone"/>
+        /// Default: <see cref="ApiConsts.DefaultPhone"/>
         /// </summary>
         [Required]
         [Phone]
@@ -37,8 +32,8 @@ namespace Bt.IPay.Net.Requests.Register
         [JsonProperty("phone")]
         public string Phone
         {
-            get => string.IsNullOrEmpty(_phone) ? DefaultPhone : _phone.GetOnlyDigits().Truncate(15);
-            set => _phone = string.IsNullOrEmpty(value) ? DefaultPhone : value;
+            get => string.IsNullOrEmpty(_phone) ? ApiConsts.DefaultPhone : _phone.GetOnlyDigits().FormatPhone().Truncate(15);
+            set => _phone = string.IsNullOrEmpty(value) ? ApiConsts.DefaultPhone : value;
         }
 
         private string _contact;

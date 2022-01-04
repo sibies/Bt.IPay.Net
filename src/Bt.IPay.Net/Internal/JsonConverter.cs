@@ -11,7 +11,8 @@ namespace Bt.IPay.Net.Internal
 
         public static string SerializeObject<T>(T data)
         {
-            return JsonConvert.SerializeObject(data);
+            var settings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+            return JsonConvert.SerializeObject(data, settings);
         }
     }
 }

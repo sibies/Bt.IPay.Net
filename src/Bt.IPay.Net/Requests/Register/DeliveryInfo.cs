@@ -60,6 +60,7 @@ namespace Bt.IPay.Net.Requests.Register
         /// <summary>
         /// Adresa poștală de livrare / facturare
         /// </summary>
+        [Required]
         [StringLength(50)]
         [JsonProperty("postAddress")]
         public string PostAddress
