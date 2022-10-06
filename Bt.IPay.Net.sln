@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.128
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F5F2A827-45C5-4523-9358-53ECEF1D1867}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{21F25869-AA7D-4168-ACF3-B3219247BFBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bt.IPay.Net", "src\Bt.IPay.Net\Bt.IPay.Net.csproj", "{3D0B719A-F3F3-4228-97B1-E330B9D6D27A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bt.IPay.Net", "src\Bt.IPay.Net\Bt.IPay.Net.csproj", "{3D0B719A-F3F3-4228-97B1-E330B9D6D27A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bt.IPay.Net.Tests", "test\Bt.IPay.Net.Tests\Bt.IPay.Net.Tests.csproj", "{45A27A90-0546-4507-AA7E-9B5D8BE514B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bt.IPay.Net.Tests", "test\Bt.IPay.Net.Tests\Bt.IPay.Net.Tests.csproj", "{45A27A90-0546-4507-AA7E-9B5D8BE514B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bt.IPay.Net.Console", "src\Bt.IPay.Net.Console\Bt.IPay.Net.Console.csproj", "{4105BBC2-B57A-47D9-A260-B31C27D1CBEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{45A27A90-0546-4507-AA7E-9B5D8BE514B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45A27A90-0546-4507-AA7E-9B5D8BE514B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45A27A90-0546-4507-AA7E-9B5D8BE514B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4105BBC2-B57A-47D9-A260-B31C27D1CBEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4105BBC2-B57A-47D9-A260-B31C27D1CBEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4105BBC2-B57A-47D9-A260-B31C27D1CBEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4105BBC2-B57A-47D9-A260-B31C27D1CBEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{3D0B719A-F3F3-4228-97B1-E330B9D6D27A} = {F5F2A827-45C5-4523-9358-53ECEF1D1867}
 		{45A27A90-0546-4507-AA7E-9B5D8BE514B6} = {21F25869-AA7D-4168-ACF3-B3219247BFBE}
+		{4105BBC2-B57A-47D9-A260-B31C27D1CBEB} = {F5F2A827-45C5-4523-9358-53ECEF1D1867}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D50EEB42-27A3-4D7F-A1AD-925EB4F770E2}

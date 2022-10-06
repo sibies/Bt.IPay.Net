@@ -225,6 +225,10 @@
         /// </summary>
         CardBlocat = 803,
         /// <summary>
+        /// Tranzacția nu este permisă
+        /// </summary>
+        TranzactiaNuEstePermisa = 804,
+        /// <summary>
         /// Tranzacție respinsă.
         /// </summary>
         TranzactieRespinsa = 805,
@@ -249,10 +253,6 @@
         /// The message format is incorrect in terms of the issuing bank.
         /// </summary>
         DeclineFormatError = 904,
-         /// <summary>
-        /// Tranzacția nu este permisă
-        /// </summary>
-        TranzactiaNuEstePermisa = 804,
         /// <summary>
         ///  Card invalid. Acesta nu există în baza de date.
         /// </summary>

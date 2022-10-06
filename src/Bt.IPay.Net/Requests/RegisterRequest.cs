@@ -144,7 +144,6 @@ namespace Bt.IPay.Net.Requests
         /// </summary>
         [StringLength(20)]
         [JsonProperty("pageView")]
-        [Obsolete("Nu se mai foloseste")]
         public PageView PageView { get; set; }
 
         [Required]
