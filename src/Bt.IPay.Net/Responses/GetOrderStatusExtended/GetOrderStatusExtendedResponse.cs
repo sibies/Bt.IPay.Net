@@ -47,7 +47,7 @@ namespace Bt.IPay.Net.Responses.GetOrderStatusExtended
         /// In cazul in care apar si alte <see cref="ActionCode"/> si nu sunt prevazute in enum.
         /// </summary>
         [JsonIgnore]
-        public bool Success => ActionCodeInt == (int)ActionCode.Succes && OrderStatus == OrderStatus.TheAmountWasDepositedSuccessfully && ErrorCode == ErrorCode.Success;
+        public bool Success => ActionCode == ActionCode.Succes && OrderStatus == OrderStatus.TheAmountWasDepositedSuccessfully && ErrorCode == ErrorCode.Success;
 
         /// <summary>
         /// Descrierea codului furnizat de parametrul actionCode
