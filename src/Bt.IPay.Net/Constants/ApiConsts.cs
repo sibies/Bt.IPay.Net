@@ -35,7 +35,7 @@
 
         public static class Test
         {
-            public const string BaseApiUrl = "https://ecclients.btrl.ro:5443";
+            public const string BaseApiUrl = "https://ecclients-sandbox.btrl.ro";
             public const string BaseApiPath = BaseApiUrl + "/payment/rest";
             public const string BaseRegisterApiPath = BaseApiPath + "/register.do";
             public const string BaseRegisterPreAuthApiPath = BaseApiPath + "/registerPreAuth.do";
