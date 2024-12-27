@@ -6,6 +6,8 @@
     <Company>Sibies Soft</Company>
     <Authors>Sibies Soft</Authors>
     <RepositoryUrl>https://github.com/sibies/Bt.IPay.Net</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageTags>bt ipay</PackageTags>
     <NeutralLanguage>ro</NeutralLanguage>
     <PackageProjectUrl>www.sibies.ro</PackageProjectUrl>
@@ -16,9 +18,14 @@
     <AssemblyOriginatorKeyFile>key.pfx</AssemblyOriginatorKeyFile>
     <PackageIcon>btepos.ro-web.jpg</PackageIcon>
     <Description>Clinet .Net pentru platile online iPay de la Banca Transilvania</Description>
-    <Version>2.1.0.0</Version>
-    <AssemblyVersion>2.1.0.0</AssemblyVersion>
-    <FileVersion>2.1.0.0</FileVersion>
+    <Version>2.3.0.0</Version>
+    <AssemblyVersion>2.3.0.0</AssemblyVersion>
+    <FileVersion>2.3.0.0</FileVersion>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>
+		## What's Changed
+		* Add Missing USD
+	</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,14 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="..\..\btepos.ro-web.jpg">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
+    <None Include="..\..\README.md" Pack="True" PackagePath="" />
+    <None Include="..\..\LICENSE" Pack="True" PackagePath="" />
+    <None Include="..\..\btepos.ro-web.jpg" Pack="True" PackagePath="" />
   </ItemGroup>
 
 </Project>

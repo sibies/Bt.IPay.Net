@@ -11,10 +11,13 @@ namespace Bt.IPay.Net.Tests
 {
     public class IpayClientTests
     {
+        private const string DevUsername = "test_api";
+        private const string DevPassword = "test_api1";
+
         [Fact]
         public async Task RegisterPreAuthTest()
         {
-            var client = new IpayClient("test_api", "test_api1");
+            var client = new IpayClient(DevUsername, DevPassword);
             var data = new RegisterRequest
             {
                 Currency = IPayCurrency.RON,
@@ -56,7 +59,7 @@ namespace Bt.IPay.Net.Tests
         [Fact]
         public async Task GetOrderStatusExtendedTest()
         {
-            var client = new IpayClient("test_api", "test_api1");
+            var client = new IpayClient(DevUsername, DevPassword);
             var data = new GetOrderStatusExtendedRequest
             {
                 OrderId = "44c36581-7b32-4d2f-9d8e-d932a7a8beae"
